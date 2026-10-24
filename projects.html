@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore selected website and digital projects by [YOUR NAME], a personal digital-growth partner.">
+  <meta name="theme-color" content="#fffaf6">
+  <title>All Projects — [YOUR NAME]</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FF6A00'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='white'%3E%5BY%5D%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* ===== SHARED THEME VARIABLES & RESET ===== */
+    :root{--primary:#FF6A00;--primary-hover:#E65F00;--primary-text:#C2410C;--primary-soft:#FFF1E6;--bg:#FFFFFF;--bg-alt:#FAF7F4;--card:#FFFFFF;--text:#1A1A1A;--text-muted:#5C5C5C;--border:#EADFD6;--shadow:0 18px 50px rgba(68,38,17,.075);--shadow-hover:0 24px 56px rgba(68,38,17,.13);--radius:16px;--nav-height:76px;color-scheme:light}
+    [data-theme="dark"]{--primary:#FF6A00;--primary-hover:#FF8533;--primary-text:#FF8533;--primary-soft:rgba(255,106,0,.15);--bg:#0F0F0F;--bg-alt:#161616;--card:#1C1C1C;--text:#F5F5F5;--text-muted:#A3A3A3;--border:#2E2E2E;--shadow:0 18px 50px rgba(0,0,0,.22);--shadow-hover:0 24px 56px rgba(0,0,0,.32);color-scheme:dark}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-height) + 20px)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;font-size:16px;line-height:1.7;transition:background-color .3s,color .3s;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 82% 7%,rgba(255,106,0,.055),transparent 26%),radial-gradient(ellipse at 5% 45%,rgba(255,106,0,.025),transparent 25%)}
+    img{display:block;max-width:100%;font-size:0;color:transparent}a{color:inherit;text-decoration:none}button{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:3px solid var(--primary);outline-offset:4px;border-radius:6px}
+    .container{width:min(1160px,calc(100% - 48px));margin-inline:auto}.section{padding:90px 0}
+    h1,h2,h3{font-family:"Poppins",sans-serif;line-height:1.16;letter-spacing:-.045em;margin:0}
+    .accent{color:var(--primary-text)}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--primary-text);font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:24px;height:2px;background:var(--primary);border-radius:9px}
+    .button{display:inline-flex;min-height:52px;align-items:center;justify-content:center;gap:10px;padding:0 23px;border:1px solid transparent;border-radius:999px;background:var(--primary);color:#fff;font-weight:700;font-size:.9rem;box-shadow:0 8px 20px rgba(255,106,0,.18);transition:transform .22s,background-color .22s,box-shadow .22s}
+    .button:hover{transform:translateY(-2px);background:var(--primary-hover);box-shadow:0 12px 26px rgba(255,106,0,.25)}.button-outline{background:transparent;color:var(--primary-text);border-color:var(--primary);box-shadow:none}.button-outline:hover{background:var(--primary-soft);box-shadow:none}
+    .button-small{min-height:44px;padding:0 18px;font-size:.84rem}.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;background:var(--primary-soft);color:var(--primary-text);font-size:.76rem;font-weight:600;line-height:1.2}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .28s,box-shadow .28s,border-color .28s,background-color .3s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);border-color:rgba(255,106,0,.35)}
+    .icon-tile{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--primary-soft);color:var(--primary-text);font-size:1.15rem;flex:0 0 auto}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
+    .image-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--primary-text);text-align:center;padding:24px;pointer-events:none}
+    .image-fallback i{font-size:2.2rem;opacity:.8}.image-fallback span{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+    /* ===== SHARED NAVIGATION ===== */
+    .site-header{height:var(--nav-height);position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--border) 75%,transparent)}
+    .nav-wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:13px;background:var(--primary);color:#fff;font:700 .95rem "Poppins",sans-serif;box-shadow:0 5px 14px rgba(255,106,0,.22)}
+    .brand-copy{line-height:1.15}.brand-copy strong{display:block;font:700 .92rem "Poppins",sans-serif;letter-spacing:-.02em}.brand-copy small{display:block;margin-top:4px;color:var(--text-muted);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase}
+    .nav-links{display:flex;align-items:center;gap:clamp(14px,2.1vw,27px);margin:0;padding:0;list-style:none}.nav-links a{position:relative;color:var(--text-muted);font-size:.79rem;font-weight:600;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary-text)}.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:2px;background:var(--primary);border-radius:2px}
+    .nav-tools{display:flex;align-items:center;gap:10px}.theme-toggle,.menu-toggle{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:var(--card);color:var(--text);cursor:pointer;transition:background .2s,border .2s,transform .2s}
+    .theme-toggle:hover,.menu-toggle:hover{transform:translateY(-1px);border-color:var(--primary);background:var(--primary-soft)}
+    .theme-toggle .fa-sun{display:none}[data-theme="dark"] .theme-toggle .fa-moon{display:none}[data-theme="dark"] .theme-toggle .fa-sun{display:inline}.menu-toggle{display:none}
+
+    /* ===== PROJECTS PAGE INTRO ===== */
+    .projects-hero{position:relative;overflow:hidden;padding:89px 0 63px;background:var(--bg-alt);border-bottom:1px solid var(--border)}
+    .projects-hero::after{content:"";position:absolute;right:9%;top:-180px;width:430px;height:430px;border:1px solid rgba(255,106,0,.18);border-radius:50%;box-shadow:0 0 0 28px rgba(255,106,0,.03),0 0 0 70px rgba(255,106,0,.02);pointer-events:none}
+    .projects-hero .container{position:relative;z-index:1}.breadcrumb{display:flex;align-items:center;gap:9px;margin-bottom:25px;color:var(--text-muted);font-size:.78rem;font-weight:600}.breadcrumb a{color:var(--primary-text)}.breadcrumb i{font-size:.65rem}
+    .projects-hero h1{max-width:760px;margin:16px 0 16px;font-size:clamp(2.6rem,6vw,5rem);letter-spacing:-.065em}.projects-hero p{max-width:560px;margin:0;color:var(--text-muted);font-size:1rem}
+    .project-count{display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text-muted);font-size:.78rem;font-weight:600}.project-count i{color:var(--primary)}
+
+    /* ===== PROJECT FILTERS & GRID ===== */
+    .project-section{padding:60px 0 100px}.filter-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:25px}
+    .filter-list{display:flex;gap:9px;flex-wrap:wrap}.filter-button{min-height:42px;padding:0 18px;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text-muted);font-size:.8rem;font-weight:700;cursor:pointer;transition:all .2s}
+    .filter-button:hover,.filter-button[aria-pressed="true"]{border-color:var(--primary);background:var(--primary);color:#fff}
+    .filter-hint{color:var(--text-muted);font-size:.75rem}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .project-card{overflow:hidden}.project-card[hidden]{display:none}.project-thumb{height:208px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary-soft),var(--bg-alt));border-bottom:1px solid var(--border)}
+    .project-thumb::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,106,0,.15);border-radius:12px;z-index:0}
+    .project-thumb img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .5s}.project-card:hover .project-thumb img{transform:scale(1.035)}
+    .project-content{padding:21px 21px 19px}.project-meta{display:flex;justify-content:space-between;align-items:center;gap:10px}.project-index{font-size:.7rem;color:var(--text-muted);font-weight:600}
+    .project-content h2{margin:13px 0 8px;font-size:1.12rem;letter-spacing:-.035em}.project-content p{margin:0;color:var(--text-muted);font-size:.81rem;min-height:48px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.project-tags .pill{font-size:.66rem;padding:6px 9px}
+    .project-links{display:flex;gap:17px;margin-top:17px;padding-top:15px;border-top:1px solid var(--border)}.project-links a{display:inline-flex;align-items:center;gap:7px;color:var(--primary-text);font-size:.76rem;font-weight:700}.project-links a:hover{text-decoration:underline;text-underline-offset:4px}
+    .empty-projects{display:none;margin:32px 0;padding:35px;border:1px dashed var(--border);border-radius:var(--radius);color:var(--text-muted);text-align:center}.empty-projects.is-visible{display:block}
+    .back-home{text-align:center;margin-top:42px}
+
+    /* ===== SHARED FOOTER & WHATSAPP ===== */
+    .site-footer{padding:29px 0 25px;border-top:1px solid var(--border);background:var(--bg-alt)}
+    .footer-main{display:flex;justify-content:space-between;align-items:center;gap:25px}.footer-links{display:flex;flex-wrap:wrap;gap:20px}.footer-links a{color:var(--text-muted);font-size:.77rem;font-weight:600}.footer-links a:hover{color:var(--primary-text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:19px;margin-top:22px;border-top:1px solid var(--border);color:var(--text-muted);font-size:.72rem}
+    .footer-social{display:flex;gap:8px}.social-link{width:33px;height:33px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:var(--card);color:var(--text-muted);font-size:.78rem;transition:all .2s}.social-link:hover{transform:translateY(-3px);background:var(--primary);color:white;border-color:var(--primary)}
+    .floating-contact{position:fixed;right:24px;bottom:23px;z-index:15;width:54px;height:54px;display:grid;place-items:center;border:3px solid var(--bg);border-radius:50%;background:var(--primary);color:white;font-size:1.35rem;box-shadow:0 8px 24px rgba(255,106,0,.32);transition:transform .2s}
+    .floating-contact:hover{transform:translateY(-4px) scale(1.04)}.floating-contact span{position:absolute;right:65px;width:max-content;padding:7px 11px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:.7rem;font-weight:700;opacity:0;transform:translateX(5px);transition:opacity .2s,transform .2s;pointer-events:none}.floating-contact:hover span,.floating-contact:focus-visible span{opacity:1;transform:translateX(0)}
+
+    /* ===== RESPONSIVE LAYOUT ===== */
+    @media(max-width:960px){:root{--nav-height:70px}.nav-links{gap:14px}.nav-links a{font-size:.74rem}.brand-copy small{display:none}.project-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.container{width:min(100% - 36px,600px)}.menu-toggle{display:grid}.nav-tools{margin-left:auto}.nav-links{position:absolute;left:18px;right:18px;top:calc(100% + 8px);display:none;flex-direction:column;align-items:stretch;gap:0;padding:9px;border:1px solid var(--border);border-radius:16px;background:var(--card);box-shadow:var(--shadow);max-height:calc(100dvh - 100px);overflow-y:auto}.nav-links.is-open{display:flex}.nav-links li{width:100%}.nav-links a{display:block;padding:12px 13px;border-radius:9px;font-size:.88rem}.nav-links a:hover,.nav-links a.active{background:var(--primary-soft)}.nav-links a.active::after{display:none}.projects-hero{padding:68px 0 48px}.section{padding:60px 0 75px}.project-section{padding-top:40px}.filter-bar{align-items:flex-start;flex-direction:column}.filter-hint{margin-left:2px}.footer-main{align-items:flex-start;flex-direction:column}.footer-bottom{align-items:flex-start;flex-direction:column}}
+    @media(max-width:500px){.container{width:calc(100% - 32px)}.brand-mark{width:35px;height:35px}.brand-copy strong{font-size:.83rem}.projects-hero h1{font-size:clamp(2.55rem,12vw,3.6rem)}.project-grid{grid-template-columns:1fr;gap:17px}.project-thumb{height:230px}.project-content p{min-height:0}.filter-list{gap:7px}.filter-button{padding:0 14px}.footer-links{gap:13px}.floating-contact{right:15px;bottom:15px;width:50px;height:50px}}
+    /* ===== REDUCED MOTION ===== */
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <!-- ===== SHARED NAVBAR START ===== -->
+  <header class="site-header">
+    <nav class="container nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-copy"><strong>[YOUR NAME]</strong><small>Digital growth partner</small></span></a>
+      <ul class="nav-links" id="primary-navigation"><li><a href="index.html#home">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#education">Education</a></li><li><a href="index.html#projects" class="active" aria-current="page">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+      <div class="nav-tools"><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme"><i class="fa-solid fa-moon" aria-hidden="true"></i><i class="fa-solid fa-sun" aria-hidden="true"></i></button><button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button></div>
+    </nav>
+  </header>
+  <!-- ===== SHARED NAVBAR END ===== -->
+
+  <main>
+    <!-- ===== ALL PROJECTS INTRO START ===== -->
+    <section class="projects-hero">
+      <div class="container reveal">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span aria-current="page">Projects</span></nav>
+        <span class="eyebrow">A growing body of work</span>
+        <h1>All projects.<br><span class="accent">Every idea starts somewhere.</span></h1>
+        <p>A collection of work, experiments and things made for the web. Replace these considered placeholders with the stories and outcomes behind your real projects.</p>
+        <span class="project-count"><i class="fa-solid fa-shapes" aria-hidden="true"></i> 8 project spaces to make your own</span>
+      </div>
+    </section>
+    <!-- ===== ALL PROJECTS INTRO END ===== -->
+
+    <!-- ===== PROJECT FILTERS & CARDS START ===== -->
+    <section class="project-section">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <div class="filter-list" role="group" aria-label="Filter projects">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="websites" aria-pressed="false">Websites</button>
+            <button class="filter-button" type="button" data-filter="projects" aria-pressed="false">Projects</button>
+          </div>
+          <span class="filter-hint" id="filter-count" aria-live="polite">Showing 8 project spaces</span>
+        </div>
+        <div class="project-grid" id="project-grid">
+          <article class="card project-card reveal" data-category="websites"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project1.jpg</span></div><img src="images/project1.jpg" alt="Preview image for [PROJECT 1 NAME]"></div><div class="project-content"><div class="project-meta"><span class="pill">Website</span><span class="project-index">01 / 08</span></div><h2>[PROJECT 1 NAME]</h2><p>[Describe the idea, your contribution and what changed for the people using it.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 1 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 1 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="projects"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project2.jpg</span></div><img src="images/project2.jpg" alt="Preview image for [PROJECT 2 NAME]"></div><div class="project-content"><div class="project-meta"><span class="pill">Project</span><span class="project-index">02 / 08</span></div><h2>[PROJECT 2 NAME]</h2><p>[Describe the idea, your contribution and what changed for the people using it.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 2 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 2 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="websites"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project3.jpg</span></div><img src="images/project3.jpg" alt="Preview image for [PROJECT 3 NAME]"></div><div class="project-content"><div class="project-meta"><span class="pill">Website</span><span class="project-index">03 / 08</span></div><h2>[PROJECT 3 NAME]</h2><p>[Describe the idea, your contribution and what changed for the people using it.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 3 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 3 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="projects"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project4.jpg</span></div><img src="images/project4.jpg" alt="Preview image for [PROJECT 4 NAME]"></div><div class="project-content"><div class="project-meta"><span class="pill">Project</span><span class="project-index">04 / 08</span></div><h2>[PROJECT 4 NAME]</h2><p>[Describe the idea, your contribution and what changed for the people using it.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 4 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 4 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="websites"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project5.jpg</span></div><img src="images/project5.jpg" alt="Preview image for [PROJECT 5]"></div><div class="project-content"><div class="project-meta"><span class="pill">Website</span><span class="project-index">05 / 08</span></div><h2>[PROJECT 5]</h2><p>[Add a short description when you have a website project to feature here.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 5 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 5 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="projects"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project6.jpg</span></div><img src="images/project6.jpg" alt="Preview image for [PROJECT 6]"></div><div class="project-content"><div class="project-meta"><span class="pill">Project</span><span class="project-index">06 / 08</span></div><h2>[PROJECT 6]</h2><p>[Add a short description when you have a project to feature here.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 6 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 6 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="websites"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project7.jpg</span></div><img src="images/project7.jpg" alt="Preview image for [PROJECT 7]"></div><div class="project-content"><div class="project-meta"><span class="pill">Website</span><span class="project-index">07 / 08</span></div><h2>[PROJECT 7]</h2><p>[Add a short description when you have a website project to feature here.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 7 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 7 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+          <article class="card project-card reveal" data-category="projects"><div class="project-thumb"><div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i><span>Add images/project8.jpg</span></div><img src="images/project8.jpg" alt="Preview image for [PROJECT 8]"></div><div class="project-content"><div class="project-meta"><span class="pill">Project</span><span class="project-index">08 / 08</span></div><h2>[PROJECT 8]</h2><p>[Add a short description when you have a project to feature here.]</p><div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div><div class="project-links"><a href="index.html#contact" aria-label="Live demo for project 8 — replace link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a><a href="index.html#contact" aria-label="Code for project 8 — replace link"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div></div></article>
+        </div>
+        <p class="empty-projects" id="empty-projects" role="status">No project spaces in this category yet.</p>
+        <div class="back-home"><a class="button button-outline" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Back to Home</a></div>
+      </div>
+    </section>
+    <!-- ===== PROJECT FILTERS & CARDS END ===== -->
+  </main>
+
+  <!-- ===== SHARED FOOTER START ===== -->
+  <footer class="site-footer"><div class="container"><div class="footer-main"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">Y</span><span class="brand-copy"><strong>[YOUR NAME]</strong><small>Scale Your Business Online</small></span></a><nav class="footer-links" aria-label="Footer navigation"><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="projects.html" aria-current="page">Projects</a><a href="index.html#contact">Contact</a></nav></div><div class="footer-bottom"><span>© [YEAR] [YOUR NAME]. All rights reserved.</span><div class="footer-social" aria-label="Social links"><a class="social-link" href="https://instagram.com/[YOUR_HANDLE]" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a class="social-link" href="https://linkedin.com/in/[YOUR_HANDLE]" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a class="social-link" href="https://github.com/[YOUR_HANDLE]" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a></div></div></div></footer>
+  <!-- ===== SHARED FOOTER END ===== -->
+  <!-- ===== FLOATING WHATSAPP START ===== -->
+  <a class="floating-contact" href="https://wa.me/[91XXXXXXXXXX]" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (edit phone number)"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Let's talk</span></a>
+  <!-- ===== FLOATING WHATSAPP END ===== -->
+
+  <script>
+    /* ===== SHARED THEME TOGGLE — same key as index.html ===== */
+    (function(){
+      const themeKey="portfolio-theme";
+      const toggle=document.querySelector(".theme-toggle");
+      let savedTheme=null;
+      try{savedTheme=localStorage.getItem(themeKey)}catch(error){savedTheme=null}
+      const preferred=savedTheme||((window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light");
+      document.documentElement.setAttribute("data-theme",preferred);
+      function updateThemeButton(theme){toggle.setAttribute("aria-label",theme==="dark"?"Switch to light theme":"Switch to dark theme")}
+      updateThemeButton(preferred);
+      toggle.addEventListener("click",function(){
+        const next=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";
+        document.documentElement.setAttribute("data-theme",next);
+        updateThemeButton(next);
+        try{localStorage.setItem(themeKey,next)}catch(error){}
+      });
+    })();
+
+    /* ===== SHARED MOBILE NAVIGATION ===== */
+    (function(){
+      const menuButton=document.querySelector(".menu-toggle");
+      const nav=document.querySelector(".nav-links");
+      const navIcon=menuButton.querySelector("i");
+      function closeMenu(){nav.classList.remove("is-open");menuButton.setAttribute("aria-expanded","false");menuButton.setAttribute("aria-label","Open navigation menu");navIcon.className="fa-solid fa-bars"}
+      menuButton.addEventListener("click",function(){
+        const opening=!nav.classList.contains("is-open");
+        nav.classList.toggle("is-open",opening);
+        menuButton.setAttribute("aria-expanded",String(opening));
+        menuButton.setAttribute("aria-label",opening?"Close navigation menu":"Open navigation menu");
+        navIcon.className=opening?"fa-solid fa-xmark":"fa-solid fa-bars";
+      });
+      nav.querySelectorAll("a").forEach(function(link){link.addEventListener("click",closeMenu)});
+      document.addEventListener("keydown",function(event){if(event.key==="Escape")closeMenu()});
+    })();
+
+    /* ===== PROJECT FILTERS ===== */
+    (function(){
+      const filterButtons=[...document.querySelectorAll(".filter-button")];
+      const cards=[...document.querySelectorAll(".project-card")];
+      const count=document.getElementById("filter-count");
+      const empty=document.getElementById("empty-projects");
+      filterButtons.forEach(function(button){
+        button.addEventListener("click",function(){
+          const filter=button.dataset.filter;
+          let visible=0;
+          filterButtons.forEach(function(item){item.setAttribute("aria-pressed",String(item===button))});
+          cards.forEach(function(card){
+            const show=filter==="all"||card.dataset.category===filter;
+            card.hidden=!show;
+            if(show)visible+=1;
+          });
+          count.textContent="Showing "+visible+" project "+(visible===1?"space":"spaces");
+          empty.classList.toggle("is-visible",visible===0);
+        });
+      });
+    })();
+
+    /* ===== SCROLL REVEALS ===== */
+    (function(){
+      const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const revealItems=document.querySelectorAll(".reveal");
+      if(!reduced&&"IntersectionObserver"in window){
+        const observer=new IntersectionObserver(function(entries,activeObserver){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("is-visible");activeObserver.unobserve(entry.target)}})},{threshold:.12});
+        revealItems.forEach(function(item){observer.observe(item)});
+      }else{revealItems.forEach(function(item){item.classList.add("is-visible")})}
+    })();
+  </script>
+</body>
+</html>

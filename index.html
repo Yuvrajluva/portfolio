@@ -1,0 +1,2194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="A personal digital-growth partner helping businesses scale online through websites, brand promotion, social media, video and AI automation.">
+  <meta name="theme-color" content="#fffaf6">
+  <title>yuvraj luva </title>
+  <!-- <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FF6A00'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='30' font-weight='700' fill='white'%3E%5BY%5D%3C/text%3E%3C/svg%3E"> -->
+    <!-- <link rel="stylesheet" href="images/fevicon.ico"> -->
+     <link rel="icon" type="urlicon" href="images/fevicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* ===== THEME VARIABLES & RESET ===== */
+    :root {
+      --primary: #FF6A00;
+      --primary-hover: #E65F00;
+      --primary-text: #C2410C;
+      --primary-soft: #FFF1E6;
+      --bg: #FFFFFF;
+      --bg-alt: #FAF7F4;
+      --card: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #5C5C5C;
+      --border: #EADFD6;
+      --shadow: 0 18px 50px rgba(68, 38, 17, .075);
+      --shadow-hover: 0 24px 56px rgba(68, 38, 17, .13);
+      --radius: 16px;
+      --nav-height: 76px;
+      color-scheme: light
+    }
+
+    [data-theme="dark"] {
+      --primary: #FF6A00;
+      --primary-hover: #FF8533;
+      --primary-text: #FF8533;
+      --primary-soft: rgba(255, 106, 0, .15);
+      --bg: #0F0F0F;
+      --bg-alt: #161616;
+      --card: #1C1C1C;
+      --text: #F5F5F5;
+      --text-muted: #A3A3A3;
+      --border: #2E2E2E;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .22);
+      --shadow-hover: 0 24px 56px rgba(0, 0, 0, .32);
+      color-scheme: dark
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-height) + 20px)
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      transition: background-color .3s, color .3s;
+      overflow-x: hidden
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 82% 7%, rgba(255, 106, 0, .055), transparent 26%), radial-gradient(ellipse at 5% 45%, rgba(255, 106, 0, .025), transparent 25%)
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      font-size: 0;
+      color: transparent
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 4px;
+      border-radius: 6px
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto
+    }
+
+    .section {
+      padding: 108px 0;
+      scroll-margin-top: var(--nav-height)
+    }
+
+    .section-alt {
+      background: var(--bg-alt)
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary-text);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 9px
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.16;
+      letter-spacing: -.045em;
+      margin: 0
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.2vw, 3.25rem);
+      font-weight: 700
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 46px
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 18px
+    }
+
+    .section-heading p {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 16px 0 0
+    }
+
+    .accent {
+      color: var(--primary-text)
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+      box-shadow: 0 8px 20px rgba(255, 106, 0, .18);
+      transition: transform .22s, background-color .22s, box-shadow .22s
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--primary-hover);
+      box-shadow: 0 12px 26px rgba(255, 106, 0, .25)
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--primary-text);
+      border-color: var(--primary);
+      box-shadow: none
+    }
+
+    .button-outline:hover {
+      background: var(--primary-soft);
+      box-shadow: none
+    }
+
+    .button-small {
+      min-height: 44px;
+      padding: 0 18px;
+      font-size: .84rem
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .28s, box-shadow .28s, border-color .28s, background-color .3s
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(255, 106, 0, .35)
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-text);
+      font-size: .76rem;
+      font-weight: 600;
+      line-height: 1.2
+    }
+
+    .icon-tile {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--primary-soft);
+      color: var(--primary-text);
+      font-size: 1.15rem;
+      flex: 0 0 auto
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--primary-soft), var(--bg-alt));
+      border: 1px solid var(--border)
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--primary-text);
+      text-align: center;
+      padding: 24px;
+      pointer-events: none
+    }
+
+    .image-fallback i {
+      font-size: 2.2rem;
+      opacity: .8
+    }
+
+    .image-fallback span {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .image-frame img[src] {
+      position: relative;
+      z-index: 1
+    }
+
+    /* ===== NAVIGATION ===== */
+    .site-header {
+      height: var(--nav-height);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 75%, transparent)
+    }
+
+    .nav-wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font: 700 .95rem "Poppins", sans-serif;
+      box-shadow: 0 5px 14px rgba(255, 106, 0, .22)
+    }
+
+    .brand-copy {
+      line-height: 1.15
+    }
+
+    .brand-copy strong {
+      display: block;
+      font: 700 .92rem "Poppins", sans-serif;
+      letter-spacing: -.02em
+    }
+
+    .brand-copy small {
+      display: block;
+      margin-top: 4px;
+      color: var(--text-muted);
+      font-size: .64rem;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.1vw, 27px);
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--text-muted);
+      font-size: .79rem;
+      font-weight: 600;
+      transition: color .2s
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-text)
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px
+    }
+
+    .nav-tools {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      transition: background .2s, border .2s, transform .2s
+    }
+
+    .theme-toggle:hover,
+    .menu-toggle:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary);
+      background: var(--primary-soft)
+    }
+
+    .theme-toggle .fa-sun {
+      display: none
+    }
+
+    [data-theme="dark"] .theme-toggle .fa-moon {
+      display: none
+    }
+
+    [data-theme="dark"] .theme-toggle .fa-sun {
+      display: inline
+    }
+
+    .menu-toggle {
+      display: none
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      padding: 78px 0 70px;
+      min-height: 660px;
+      display: flex;
+      align-items: center
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 7%;
+      top: 58px;
+      width: 115px;
+      height: 115px;
+      border: 1px solid rgba(255, 106, 0, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 18px rgba(255, 106, 0, .035), 0 0 0 38px rgba(255, 106, 0, .022);
+      pointer-events: none
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      align-items: center;
+      gap: 55px
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      padding: 10px 0
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--text-muted);
+      font-size: .76rem;
+      font-weight: 600
+    }
+
+    .availability::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #55a86b;
+      box-shadow: 0 0 0 4px rgba(85, 168, 107, .12)
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      font-size: clamp(2.5rem, 5vw, 4.1rem);
+      font-weight: 700;
+      letter-spacing: -.065em
+    }
+
+    .hero h1 .line-accent {
+      color: var(--primary-text)
+    }
+
+    .hero-intro {
+      max-width: 540px;
+      margin: 22px 0 28px;
+      color: var(--text-muted);
+      font-size: 1.03rem;
+      line-height: 1.8
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px
+    }
+
+    .social-row .social-label {
+      margin-right: 5px;
+      color: var(--text-muted);
+      font-size: .74rem;
+      font-weight: 600
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--text-muted);
+      font-size: .9rem;
+      transition: all .2s
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary)
+    }
+
+    .hero-visual {
+      position: relative;
+      top: -10px;
+      width: min(100%, 450px);
+      justify-self: center;
+      padding: 30px
+    }
+
+    @media(min-width:960px) {
+      .hero-visual {
+        position: relative;
+        top: -150px;
+        width: min(100%, 450px);
+        justify-self: center;
+        padding: 30px
+      }
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: 8px;
+      border: 1px dashed rgba(255, 106, 0, .32);
+      border-radius: 50%;
+      transform: rotate(-16deg)
+    }
+
+    .hero-photo {
+      width: min(100%, 360px);
+      aspect-ratio: 1;
+      border: 9px solid var(--card);
+      outline: 2px solid var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 25px 70px rgba(51, 29, 12, .16);
+      margin: auto;
+      position: relative
+    }
+
+    .hero-photo .image-fallback {
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 30%, var(--card), var(--primary-soft))
+    }
+
+    .hero-photo img {
+      border-radius: 50%
+    }
+
+    .photo-label {
+      position: absolute;
+      bottom: 25px;
+      right: -5px;
+      z-index: 3;
+      padding: 15px 19px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      transform: rotate(2deg)
+    }
+
+    .photo-label strong {
+      display: block;
+      font: 700 1rem "Poppins", sans-serif
+    }
+
+    .photo-label span {
+      display: block;
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: .72rem
+    }
+
+    .visual-note {
+      position: absolute;
+      top: 18%;
+      left: -13px;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      font-size: .74rem;
+      font-weight: 700;
+      transform: rotate(-5deg)
+    }
+
+    .visual-note i {
+      margin-right: 7px;
+      color: var(--primary)
+    }
+
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 51px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+      max-width: 540px
+    }
+
+    .stat {
+      padding: 0 18px;
+      border-right: 1px solid var(--border)
+    }
+
+    .stat:first-child {
+      padding-left: 0
+    }
+
+    .stat:last-child {
+      border: 0
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 1.55rem "Poppins", sans-serif;
+      letter-spacing: -.05em
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 3px;
+      color: var(--text-muted);
+      font-size: .72rem
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 82px;
+      align-items: center
+    }
+
+    .about-visual {
+      position: relative;
+      max-width: 430px
+    }
+
+    .about-image {
+      height: 430px;
+      border-radius: 24px
+    }
+
+    .about-image .image-fallback {
+      background: linear-gradient(145deg, var(--primary-soft), var(--bg-alt))
+    }
+
+    .about-note {
+      position: absolute;
+      right: -32px;
+      bottom: 25px;
+      max-width: 210px;
+      padding: 17px 19px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      font-size: .81rem;
+      font-weight: 600
+    }
+
+    .about-note i {
+      color: var(--primary);
+      margin-right: 7px
+    }
+
+    .about-copy h2 {
+      margin: 15px 0 20px
+    }
+
+    .about-copy>p {
+      margin: 0 0 14px;
+      color: var(--text-muted)
+    }
+
+    .about-copy .editable-note {
+      padding: 16px 18px;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      background: var(--primary-soft);
+      color: var(--text);
+      font-size: .88rem
+    }
+
+    .about-groups {
+      display: grid;
+      gap: 19px;
+      margin-top: 28px
+    }
+
+    .about-group h3 {
+      margin-bottom: 10px;
+      font: 700 .77rem "Poppins", sans-serif;
+      letter-spacing: .09em;
+      text-transform: uppercase
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    /* ===== SERVICES ===== */
+    .offer-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(26px, 5vw, 54px);
+      border-radius: 28px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border)
+    }
+
+    .offer-panel::before {
+      content: "";
+      position: absolute;
+      right: -65px;
+      top: -130px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 106, 0, .2);
+      box-shadow: 0 0 0 25px rgba(255, 106, 0, .035), 0 0 0 60px rgba(255, 106, 0, .025);
+      pointer-events: none
+    }
+
+    .offer-head {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 32px
+    }
+
+    .offer-head h3 {
+      margin-top: 12px;
+      font-size: clamp(1.8rem, 3.3vw, 2.6rem)
+    }
+
+    .offer-head p {
+      max-width: 360px;
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .9rem
+    }
+
+    .service-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
+
+    .service-card {
+      min-height: 180px;
+      padding: 23px 21px
+    }
+
+    .service-card h4 {
+      margin: 19px 0 8px;
+      font-size: 1rem;
+      letter-spacing: -.025em
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .8rem;
+      line-height: 1.65
+    }
+
+    .ai-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 55px 0 18px
+    }
+
+    .ai-heading h3 {
+      font-size: 1.5rem
+    }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px
+    }
+
+    .ai-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding: 23px
+    }
+
+    .ai-card h4 {
+      margin: 2px 0 7px;
+      font-size: 1rem
+    }
+
+    .ai-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .82rem
+    }
+
+    .services-cta {
+      text-align: center;
+      margin-top: 32px
+    }
+
+    /* ===== EDUCATION ===== */
+    .education-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+      align-items: start
+    }
+
+    .education-intro h2 {
+      margin: 15px 0 17px
+    }
+
+    .education-intro p {
+      color: var(--text-muted);
+      margin: 0
+    }
+
+    .timeline {
+      position: relative;
+      padding: 7px 0 0 29px
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      bottom: 10px;
+      width: 1px;
+      background: var(--border)
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 30px 19px
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 1px var(--primary)
+    }
+
+    .timeline-item .date {
+      color: var(--primary-text);
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase
+    }
+
+    .timeline-item h3 {
+      margin: 7px 0;
+      font-size: 1.1rem
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .88rem
+    }
+
+    .timeline-item.optional {
+      padding: 15px 18px;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      color: var(--text-muted)
+    }
+
+    .timeline-item.optional::before {
+      left: -27px;
+      top: 21px;
+      background: var(--bg-alt);
+      box-shadow: 0 0 0 1px var(--border)
+    }
+
+    /* ===== PROJECT CARDS ===== */
+    .projects-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px
+    }
+
+    .projects-top .section-heading {
+      margin-bottom: 38px
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 23px
+    }
+
+    .project-card {
+      overflow: hidden
+    }
+
+    .project-thumb {
+      height: 245px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-soft), var(--bg-alt));
+      border-bottom: 1px solid var(--border)
+    }
+
+    .project-thumb::before {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(255, 106, 0, .15);
+      border-radius: 12px;
+      z-index: 0
+    }
+
+    .project-thumb .image-fallback {
+      z-index: 0
+    }
+
+    .project-thumb img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s
+    }
+
+    .project-card:hover .project-thumb img {
+      transform: scale(1.035)
+    }
+
+    .project-content {
+      padding: 23px 24px 22px
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px
+    }
+
+    .project-index {
+      font-size: .72rem;
+      color: var(--text-muted);
+      font-weight: 600
+    }
+
+    .project-content h3 {
+      margin: 13px 0 8px;
+      font-size: 1.23rem
+    }
+
+    .project-content p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .84rem;
+      min-height: 48px
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px
+    }
+
+    .project-tags .pill {
+      font-size: .68rem;
+      padding: 6px 10px
+    }
+
+    .project-links {
+      display: flex;
+      gap: 19px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border)
+    }
+
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--primary-text);
+      font-size: .79rem;
+      font-weight: 700
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px
+    }
+
+    .project-more {
+      text-align: center;
+      margin-top: 34px
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact-section::after {
+      content: "";
+      position: absolute;
+      right: -130px;
+      bottom: -190px;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255, 106, 0, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 26px rgba(255, 106, 0, .025), 0 0 0 62px rgba(255, 106, 0, .02);
+      pointer-events: none
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 60px;
+      align-items: start
+    }
+
+    .contact-copy h2 {
+      margin: 15px 0 17px
+    }
+
+    .contact-copy>p {
+      max-width: 410px;
+      color: var(--text-muted);
+      margin: 0 0 29px
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 18px;
+      margin: 0 0 27px
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 13px
+    }
+
+    .contact-detail .icon-tile {
+      width: 43px;
+      height: 43px;
+      font-size: .98rem
+    }
+
+    .contact-detail small {
+      display: block;
+      color: var(--text-muted);
+      font-size: .7rem
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin-top: 2px;
+      font-size: .88rem
+    }
+
+    .contact-card {
+      position: relative;
+      z-index: 1;
+      padding: clamp(23px, 4vw, 36px)
+    }
+
+    .contact-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 5px
+    }
+
+    .contact-card>p {
+      margin: 0 0 22px;
+      color: var(--text-muted);
+      font-size: .84rem
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .field-full {
+      grid-column: 1/-1
+    }
+
+    .field label {
+      font-size: .76rem;
+      font-weight: 700
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: var(--bg);
+      color: var(--text);
+      padding: 12px 13px;
+      min-height: 48px;
+      font-size: .83rem;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    .field textarea {
+      min-height: 115px;
+      resize: vertical
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: var(--text-muted);
+      opacity: .7
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255, 106, 0, .12)
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 16px;
+      border: 0;
+      cursor: pointer
+    }
+
+    .form-note {
+      margin: 12px 0 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: .72rem
+    }
+
+    .form-status {
+      min-height: 20px;
+      margin: 9px 0 0;
+      color: var(--primary-text);
+      font-size: .78rem;
+      font-weight: 600
+    }
+
+    /* ===== FOOTER & FLOATING CONTACT ===== */
+    .site-footer {
+      padding: 29px 0 25px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-alt)
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: .77rem;
+      font-weight: 600
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-text)
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-top: 19px;
+      margin-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: .72rem
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 8px
+    }
+
+    .footer-social .social-link {
+      width: 33px;
+      height: 33px;
+      font-size: .78rem
+    }
+
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      bottom: 23px;
+      z-index: 15;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 1.35rem;
+      box-shadow: 0 8px 24px rgba(255, 106, 0, .32);
+      transition: transform .2s
+    }
+
+    .floating-contact:hover {
+      transform: translateY(-4px) scale(1.04)
+    }
+
+    .floating-contact span {
+      position: absolute;
+      right: 65px;
+      width: max-content;
+      padding: 7px 11px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--text);
+      font-size: .7rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateX(5px);
+      transition: opacity .2s, transform .2s;
+      pointer-events: none
+    }
+
+    .floating-contact:hover span,
+    .floating-contact:focus-visible span {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    /* ===== RESPONSIVE LAYOUT ===== */
+    @media(max-width:960px) {
+      :root {
+        --nav-height: 70px
+      }
+
+      .nav-links {
+        gap: 14px
+      }
+
+      .nav-links a {
+        font-size: .74rem
+      }
+
+      .brand-copy small {
+        display: none
+      }
+
+      .hero-grid {
+        gap: 25px
+      }
+
+      .about-grid {
+        gap: 48px
+      }
+
+      .contact-grid {
+        gap: 35px
+      }
+    }
+
+    @media(max-width:760px) {
+      .container {
+        width: min(100% - 36px, 600px)
+      }
+
+      .section {
+        padding: 78px 0
+      }
+
+      .menu-toggle {
+        display: grid
+      }
+
+      .nav-tools {
+        margin-left: auto
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: calc(100% + 8px);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 9px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto
+      }
+
+      .nav-links.is-open {
+        display: flex
+      }
+
+      .nav-links li {
+        width: 100%
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 13px;
+        border-radius: 9px;
+        font-size: .88rem
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        background: var(--primary-soft)
+      }
+
+      .nav-links a.active::after {
+        display: none
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 55px 0 48px
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px
+      }
+
+      .hero-copy {
+        order: 1
+      }
+
+      .hero-visual {
+        order: 0;
+        width: min(78%, 360px);
+        padding: 17px;
+        margin-bottom: 6px
+      }
+
+      .hero-photo {
+        width: min(100%, 270px);
+        border-width: 7px
+      }
+
+      .hero-orbit {
+        inset: 0
+      }
+
+      .photo-label {
+        right: -18px;
+        bottom: 13px
+      }
+
+      .visual-note {
+        top: 14%;
+        left: -17px
+      }
+
+      .hero::after {
+        right: 4%;
+        top: 26px;
+        width: 65px;
+        height: 65px;
+        box-shadow: 0 0 0 12px rgba(255, 106, 0, .035), 0 0 0 24px rgba(255, 106, 0, .02)
+      }
+
+      .hero h1 {
+        font-size: clamp(2.45rem, 10vw, 3.65rem)
+      }
+
+      .hero-intro {
+        font-size: .94rem
+      }
+
+      .social-row {
+        margin-top: 25px
+      }
+
+      .stats-strip {
+        margin-top: 35px
+      }
+
+      .stat {
+        padding: 0 11px
+      }
+
+      .stat strong {
+        font-size: 1.28rem
+      }
+
+      .stat span {
+        font-size: .65rem
+      }
+
+      .about-grid,
+      .education-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 38px
+      }
+
+      .about-visual {
+        width: min(100% - 18px, 420px);
+        margin: auto
+      }
+
+      .about-image {
+        height: 350px
+      }
+
+      .about-note {
+        right: -17px
+      }
+
+      .about-copy {
+        order: -1
+      }
+
+      .offer-head {
+        display: block
+      }
+
+      .offer-head p {
+        margin-top: 14px
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .service-card {
+        min-height: 165px;
+        padding: 19px
+      }
+
+      .ai-grid {
+        grid-template-columns: 1fr
+      }
+
+      .projects-top {
+        display: block
+      }
+
+      .projects-top .section-heading {
+        margin-bottom: 0
+      }
+
+      .project-grid {
+        gap: 16px
+      }
+
+      .project-thumb {
+        height: 210px
+      }
+
+      .contact-card {
+        padding: 24px 20px
+      }
+
+      .footer-main {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:500px) {
+      .container {
+        width: calc(100% - 32px)
+      }
+
+      .brand-mark {
+        width: 35px;
+        height: 35px
+      }
+
+      .brand-copy strong {
+        font-size: .83rem
+      }
+
+      .hero-actions .button {
+        flex: 1;
+        padding-inline: 14px;
+        font-size: .81rem
+      }
+
+      .social-row {
+        gap: 7px
+      }
+
+      .social-row .social-label {
+        font-size: .67rem
+      }
+
+      .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: .82rem
+      }
+
+      .stats-strip {
+        margin-top: 30px
+      }
+
+      .stat:first-child {
+        padding-right: 8px
+      }
+
+      .stat {
+        padding: 0 8px
+      }
+
+      .stat strong {
+        font-size: 1.1rem
+      }
+
+      .stat span {
+        line-height: 1.35
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr
+      }
+
+      .service-card {
+        min-height: 0
+      }
+
+      .service-card h4 {
+        margin: 13px 0 5px
+      }
+
+      .ai-heading {
+        margin-top: 40px
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr
+      }
+
+      .project-thumb {
+        height: 230px
+      }
+
+      .project-content {
+        padding: 20px
+      }
+
+      .project-content p {
+        min-height: 0
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr
+      }
+
+      .field-full {
+        grid-column: auto
+      }
+
+      .footer-links {
+        gap: 13px
+      }
+
+      .floating-contact {
+        right: 15px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px
+      }
+
+      .about-image {
+        height: 300px
+      }
+
+      .about-note {
+        max-width: 185px;
+        padding: 13px;
+        font-size: .74rem
+      }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAVBAR START ===== -->
+  <header class="site-header">
+    <nav class="container nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark" aria-hidden="true">
+        <img src="images/fevicon.ico" alt="">
+      </span><span
+          class="brand-copy"><strong>Yuvraj Luva</strong><small>Digital growth partner</small></span></a>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-tools"><button class="theme-toggle" type="button" aria-label="Switch to dark theme"
+          title="Toggle theme"><i class="fa-solid fa-moon" aria-hidden="true"></i><i class="fa-solid fa-sun"
+            aria-hidden="true"></i></button><button class="menu-toggle" type="button" aria-label="Open navigation menu"
+          aria-controls="primary-navigation" aria-expanded="false"><i class="fa-solid fa-bars"
+            aria-hidden="true"></i></button></div>
+    </nav>
+  </header>
+  <!-- ===== NAVBAR END ===== -->
+
+  <main>
+    <!-- ===== HOME / HERO START ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <!-- "All-in-one digital growth: Websites, branding, and content." -->
+          <span class="availability">Open to thoughtful projects</span>
+          <p class="eyebrow">Your digital growth partner</p>
+          <h1>All-in-one digital <span class="line-accent">growth partner: </span> Websites, branding, and
+            content-creation.</h1>
+          <p class="hero-intro">A practical, creative partner for the next chapter of your business. Let’s make your
+            online presence work harder, look sharper, and feel unmistakably yours.</p>
+
+          <div class="hero-actions"><a class="button" href="#contact">Hire Me <i class="fa-solid fa-arrow-right"
+                aria-hidden="true"></i></a><a class="button button-outline" href="#projects">View My Work</a></div>
+
+          <div class="social-row" aria-label="Social links">
+            <span class="social-label">Find me on</span>
+
+            <a class="social-link" href="https://www.instagram.com/yuvraj_pushkar_hills?obrf=cTZnZ2QyaTBtOTY%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram (edit profile link)">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-link" href="https://www.linkedin.com/in/yuvraj-luva" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn (edit profile link)">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-link" href="https://github.com/Yuvrajluva" target="_blank" rel="noopener noreferrer" aria-label="GitHub (edit profile link)">
+              <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a class="social-link" href="https://youtube.com/@theprogrammer29?si=rRGflztISjQlePrm" target="_blank" rel="noopener noreferrer"
+              aria-label="YouTube (edit profile link)">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-link" href="https://wa.me/9950543576" target="_blank" rel="noopener noreferrer"
+              aria-label="WhatsApp (edit phone number)">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+          <!-- <div class="stats-strip" aria-label="Experience statistics"><div class="stat"><strong>[X]+</strong><span>Projects</span></div><div class="stat"><strong>[X]+</strong><span>Years experience</span></div><div class="stat"><strong>[X]+</strong><span>Happy clients</span></div></div> -->
+        </div>
+
+        <!-- profile picture at the home page -->
+        <div class="hero-visual reveal" aria-label="Profile image">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <div class="image-frame hero-photo">
+            <div class="image-fallback" aria-hidden="true"><span> <img src="images\profile.jpeg" alt="profile image">
+              </span>
+            </div>
+            <img src="images/profile.jpg" alt="Portrait of [YOUR NAME]">
+          </div>
+          <div class="visual-note"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>Build.Grow.Repeat</div>
+          <div class="photo-label"><strong>Yuvraj Luva</strong><span>[Web Developer &amp; Digital Growth Partner]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== HOME / HERO END ===== -->
+
+    <!-- ===== ABOUT START ===== -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <!--  -->
+        <div class="about-visual reveal">
+          <div class="image-frame about-image">
+
+            <div class="image-fallback" aria-hidden="true"><span> <img src="images/profile.jpeg" alt=""> </span>
+
+            </div>
+
+          </div>
+          <!-- <div class="about-note"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>One partner. A clearer digital presence.</div> -->
+        </div>
+
+
+        <div class="about-copy reveal"><span class="eyebrow">A little about me</span>
+          <h2>Good digital work should make growth feel <span class="accent">possible.</span></h2>
+          <p class="editable-note">I am a Web-developer and AI automation builder and I can build a beautiful and
+            interactive website along with automation to handles customers automatically, that are the essitional parts
+            for any business to grow online.</p>
+          <div class="about-groups">
+            <div class="about-group">
+              <h3>What I work with</h3>
+              <div class="pill-list"><span class="pill"><i class="fa-solid fa-code"
+                    aria-hidden="true"></i>Programming</span><span class="pill"><i class="fa-solid fa-window-maximize"
+                    aria-hidden="true"></i>Web Development</span><span class="pill"><i class="fa-solid fa-robot"
+                    aria-hidden="true"></i>AI Automation</span><span class="pill"><i class="fa-solid fa-clapperboard"
+                    aria-hidden="true"></i>Content Creation</span></div>
+            </div>
+            <div class="about-group">
+              <h3>Based in</h3>
+              <div class="pill-list"><span class="pill"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>[
+                  Ajmer, Rajasthan ]</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== ABOUT END ===== -->
+
+    <!-- ===== SERVICES START ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">How I can help</span>
+          <h2>Everything your next stage <span class="accent">needs.</span></h2>
+          <p>From your first impression to the systems behind the scenes, bring the moving parts together with one
+            hands-on partner.</p>
+        </div>
+        <div class="offer-panel reveal">
+          <div class="offer-head">
+            <div><span class="eyebrow">The offer</span>
+              <h3>Scale Your Business Online</h3>
+            </div>
+            <p>Everything you need to grow your brand online, from one place.</p>
+          </div>
+          <div class="service-grid">
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-laptop-code"
+                  aria-hidden="true"></i></span>
+              <h4>Website Development</h4>
+              <p>A clear, thoughtful home for your business on the web.</p>
+            </article>
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-bullhorn"
+                  aria-hidden="true"></i></span>
+              <h4>Brand Promotion</h4>
+              <p>Get your story in front of the people who need to hear it.</p>
+            </article>
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-hashtag"
+                  aria-hidden="true"></i></span>
+              <h4>Social Media Account Management</h4>
+              <p>Consistent, considered social presence that sounds like you.</p>
+            </article>
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-video"
+                  aria-hidden="true"></i></span>
+              <h4>Video Shoot, Reels &amp; Editing</h4>
+              <p>Make short-form video with a point of view and a purpose.</p>
+            </article>
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-pen-nib"
+                  aria-hidden="true"></i></span>
+              <h4>Poster &amp; Logo Design</h4>
+              <p>Distinctive visual assets that help your brand feel cohesive.</p>
+            </article>
+            <article class="card service-card"><span class="icon-tile"><i class="fa-solid fa-lightbulb"
+                  aria-hidden="true"></i></span>
+              <h4>Content Creation for Your Page</h4>
+              <p>Useful, engaging content made for your audience and goals.</p>
+            </article>
+          </div>
+          <div class="ai-heading"><span class="icon-tile"><i class="fa-solid fa-wand-magic-sparkles"
+                aria-hidden="true"></i></span>
+            <h3>AI &amp; Data</h3>
+          </div>
+          <div class="ai-grid">
+            <article class="card ai-card"><span class="icon-tile"><i class="fa-solid fa-robot"
+                  aria-hidden="true"></i></span>
+              <div>
+                <h4>Automate Your Work with AI Agents</h4>
+                <p>We build practical AI agents to take repetitive work off your plate.</p>
+              </div>
+            </article>
+            <article class="card ai-card"><span class="icon-tile"><i class="fa-solid fa-chart-pie"
+                  aria-hidden="true"></i></span>
+              <div>
+                <h4>Database Management &amp; Analytics</h4>
+                <p>Data insights and clean, informative dashboards that help you decide.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="services-cta"><a class="button" href="#contact">Get a Free Quote <i class="fa-solid fa-arrow-right"
+              aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+    <!-- ===== SERVICES END ===== -->
+
+    <!-- ===== EDUCATION START ===== -->
+    <section class="section section-alt" id="education">
+      <div class="container education-layout">
+        <div class="education-intro reveal"><span class="eyebrow">The journey so far</span>
+          <h2>Learning is part of the <span class="accent">work.</span></h2>
+          <p>Here's my education journay -</p>
+        </div>
+        <div class="timeline reveal" aria-label="Education timeline">
+          <article class="timeline-item"><span class="date">2025 - .. ( Pursuing)</span>
+            <h3>Star Infotech College Ajmer</h3>
+            <p>Bachelors in Computer Application</p>
+          </article>
+          <article class="timeline-item"><span class="date">2023 - 2025</span>
+            <h3>Govt. Sr. Sec. School Pushkar</h3>
+            <p>Science Mathmatics Stream</p>
+          </article>
+          <article class="timeline-item"><span class="date">till 2023</span>
+            <h3>Taramani Sr. Sec. School Pushkar</h3>
+            <p>Secondary Education</p>
+          </article>
+          <!-- <div class="timeline-item optional"><span class="date">Optional — add if applicable</span>
+            <h3>Certifications</h3>
+            <p>[Add a certification here, or remove this entry.]</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- ===== EDUCATION END ===== -->
+
+    <!-- ===== PROJECTS START ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="projects-top">
+          <div class="section-heading reveal"><span class="eyebrow">Selected work</span>
+            <h2>Projects with a <span class="accent">purpose.</span></h2>
+            <p>These are projects that I have build and helping them to reach their audience online.</p>
+          </div><a class="button button-outline button-small" href="projects.html">All projects <i
+              class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card reveal">
+            <div class="project-thumb">
+              <div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i></div><img
+                src="images/caoching-banner.webp" alt="Preview of [PROJECT 1 NAME]">
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="pill">Website</span><span class="project-index">01 / 04</span>
+              </div>
+              <h3>Coaching Website : Ashwini Coaching Classes</h3>
+              <p> It helps students to get notes and courses information online.</p>
+              <!-- <div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div> -->
+              <div class="project-links">
+
+              
+                <a href="https://yuvrajluva.github.io/ashwinicoachingclasses" target="_blank" >
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" aria-label="Live demo for project 1 — replace link" ></i>Live Demo
+                </a>
+                  <!-- <a href="https://yuvrajluva.github.io/ashwinicoachingclasses" >
+                  <i class="fa-brands fa-github" aria-hidden="true" aria-label="Code for project 1 — replace link"></i>Code
+                </a> -->
+
+              </div>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-thumb">
+              <div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i></div><img src="images/LuckyCreation2.png" alt="Preview of [PROJECT 2 NAME]">
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="pill">Website</span><span class="project-index">02 / 04</span>
+              </div>
+              <h3>Editor Website : Lucky Creation</h3>
+              <p>It helps client to get customers and showcase his work online.</p>
+              <!-- <div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div> -->
+              <div class="project-links"><a href="https://yuvrajluva.github.io/luckyCreation" target="_blank" aria-label="Live demo for project 2 — replace link"><i
+                    class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a>
+                    <!-- <a
+                  href="https://yuvrajluva.github.io/ashwinicoachingclasses" target="_blank" aria-label="Code for project 2 — replace link"><i class="fa-brands fa-github"
+                    aria-hidden="true"></i>Code</a> -->
+                  </div>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-thumb">
+              <div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i>
+              </div><img src="images/caoching-banner.webp" alt="Preview of [PROJECT 3 NAME]">
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="pill">Website</span><span class="project-index">03 / 04</span>
+              </div>
+              <h3>Coaching Website : Ashwini Coaching Classes</h3>
+              <p>It helps students to get notes and courses information online.</p>
+              <!-- <div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div> -->
+              <div class="project-links"><a href="https://yuvrajluva.github.io/ashwinicoachingclasses" target="_blank" aria-label="Live demo for project 2 — replace link"><i
+                    class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a>
+                    <!-- <a
+                  href="https://yuvrajluva.github.io/ashwinicoachingclasses" target="_blank" aria-label="Code for project 2 — replace link"><i class="fa-brands fa-github"
+                    aria-hidden="true"></i>Code</a> -->
+                  </div>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-thumb">
+              <div class="image-fallback" aria-hidden="true"><i class="fa-regular fa-image"></i>
+              </div><img src="images/LuckyCreation2.png" alt="Preview of [PROJECT 4 NAME]">
+            </div>
+           <div class="project-content">
+              <div class="project-meta"><span class="pill">Website</span><span class="project-index">03 / 04</span>
+              </div>
+               <h3>Editor Website : Lucky Creation</h3>
+              <p>It helps client to get customers and showcase his work online.</p>
+              <!-- <div class="project-tags"><span class="pill">[TAG]</span><span class="pill">[TAG]</span></div> -->
+              <div class="project-links"><a href="https://yuvrajluva.github.io/luckyCreation" target="_blank" aria-label="Live demo for project 2 — replace link"><i
+                    class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>Live Demo</a>
+                    <!-- <a
+                  href="https://yuvrajluva.github.io/ashwinicoachingclasses" target="_blank" aria-label="Code for project 2 — replace link"><i class="fa-brands fa-github"
+                    aria-hidden="true"></i>Code</a>
+                  </div> -->
+            </div>
+          </article>
+        </div>
+
+        <!-- ================= I will work on it, As of now I don't have much projects ================= -->
+
+        <!-- <div class="project-more">
+          <a class="button button-outline" href="projects.html">See More Projects 
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div> -->
+
+        <!-- ============================================================================================ -->
+      </div>
+    </section>
+    <!-- ===== PROJECTS END ===== -->
+
+    <!-- ===== CONTACT START ===== -->
+    <section class="section section-alt contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Start a conversation</span>
+          <h2>Let's connect and <span class="accent">work together.</span></h2>
+          <p>Have a project in mind, or just want to explore what could work? Tell me a little about it.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <h3>Good things start with a hello.</h3>
+            <p>Reach out in the way that feels easiest. I’ll get back to you to talk through the details.</p>
+            <div class="contact-details">
+              <div class="contact-detail"><span class="icon-tile"><i class="fa-regular fa-envelope"
+                    aria-hidden="true"></i></span>
+                <div><small>Email</small><strong>luvayuvraj@gmail.com</strong></div>
+              </div>
+              <div class="contact-detail"><span class="icon-tile"><i class="fa-solid fa-location-dot"
+                    aria-hidden="true"></i></span>
+                <div><small>Location</small><strong>Ajmer, Rajasthan</strong></div>
+              </div>
+            </div><a class="button" href="https://wa.me/9950543576" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-whatsapp" aria-hidden="true"></i>Chat on WhatsApp</a>
+          </div>
+          <form class="card contact-card reveal" id="contact-form">
+            <h3>Tell me what you're building</h3>
+            <p>Share a few details and your message will be ready to send on WhatsApp.</p>
+            <div class="form-grid">
+              <div class="field"><label for="contact-name">Your name</label><input id="contact-name" name="name"
+                  type="text" autocomplete="name" placeholder="Name" required></div>
+              <div class="field"><label for="contact-method">Phone or email</label><input id="contact-method"
+                  name="contact" type="text" autocomplete="email" placeholder="How can I reach you?" required></div>
+              <div class="field field-full"><label for="contact-service">Service you're interested in</label><select
+                  id="contact-service" name="service" required>
+                  <option value="" disabled selected>Choose a service</option>
+                  <option>Website Development</option>
+                  <option>Brand Promotion</option>
+                  <option>Social Media Account Management</option>
+                  <option>Video Shoot, Reels &amp; Editing</option>
+                  <option>Poster &amp; Logo Design</option>
+                  <option>Content Creation for Your Page</option>
+                  <option>Automate Your Work with AI Agents</option>
+                  <option>Database Management &amp; Analytics</option>
+                  <option>Something else</option>
+                </select></div>
+              <div class="field field-full"><label for="contact-message">A little about the project</label><textarea
+                  id="contact-message" name="message" placeholder="What would you like to make happen?"
+                  required></textarea></div>
+            </div><button class="button form-submit" type="submit">Send on WhatsApp <i class="fa-solid fa-arrow-right"
+                aria-hidden="true"></i></button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+            <p class="form-note">This will open WhatsApp with your message ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CONTACT END ===== -->
+  </main>
+
+  <!-- ===== FOOTER START ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main"><a class="brand" href="index.html"><span class="brand-mark"
+            aria-hidden="true"> <img src="images/fevicon.ico" alt=""> </span><span class="brand-copy"><strong>Yuvraj Luva</strong><small>Scale Your Business
+              Online</small></span></a>
+        <nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a
+            href="#services">Services</a><a href="projects.html">Projects</a><a href="#contact">Contact</a></nav>
+      </div>
+      <div class="footer-bottom">
+        <!-- <span>© [YEAR] [YOUR NAME]. All rights reserved.</span> -->
+       
+        <div class="footer-social" aria-label="Social links"><a class="social-link"
+            href="https://www.instagram.com/yuvraj_pushkar_hills?obrf=cTZnZ2QyaTBtOTY%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram profile"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a
+            class="social-link" href="https://www.linkedin.com/in/yuvraj-luva" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a
+            class="social-link" href="https://github.com/Yuvrajluva" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a></div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== FOOTER END ===== -->
+  <!-- ===== FLOATING WHATSAPP START ===== -->
+  <a class="floating-contact" href="https://wa.me/9950543576" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp (edit phone number)"><i class="fa-brands fa-whatsapp"
+      aria-hidden="true"></i><span>Let's talk</span></a>
+  <!-- ===== FLOATING WHATSAPP END ===== -->
+
+  <script>
+    /* ===== THEME TOGGLE ===== */
+    (function () {
+      const themeKey = "portfolio-theme"; const toggle = document.querySelector(".theme-toggle"); let savedTheme = null;
+      try { savedTheme = localStorage.getItem(themeKey) } catch (error) { savedTheme = null }
+      const preferred = savedTheme || ((window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", preferred);
+      function updateThemeButton(theme) { toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme") }
+      updateThemeButton(preferred);
+      toggle.addEventListener("click", function () { const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"; document.documentElement.setAttribute("data-theme", next); updateThemeButton(next); try { localStorage.setItem(themeKey, next) } catch (error) { } });
+    })();
+    /* ===== MOBILE NAVIGATION ===== */
+    (function () {
+      const menuButton = document.querySelector(".menu-toggle"); const nav = document.querySelector(".nav-links"); const navIcon = menuButton.querySelector("i");
+      function closeMenu() { nav.classList.remove("is-open"); menuButton.setAttribute("aria-expanded", "false"); menuButton.setAttribute("aria-label", "Open navigation menu"); navIcon.className = "fa-solid fa-bars" }
+      menuButton.addEventListener("click", function () { const opening = !nav.classList.contains("is-open"); nav.classList.toggle("is-open", opening); menuButton.setAttribute("aria-expanded", String(opening)); menuButton.setAttribute("aria-label", opening ? "Close navigation menu" : "Open navigation menu"); navIcon.className = opening ? "fa-solid fa-xmark" : "fa-solid fa-bars" });
+      nav.querySelectorAll("a").forEach(function (link) { link.addEventListener("click", closeMenu) }); document.addEventListener("keydown", function (event) { if (event.key === "Escape") closeMenu() });
+    })();
+    /* ===== ACTIVE SECTION & SCROLL REVEALS ===== */
+    (function () {
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches; const revealItems = document.querySelectorAll(".reveal");
+      if (!reduced && "IntersectionObserver" in window) { const observer = new IntersectionObserver(function (entries, activeObserver) { entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); activeObserver.unobserve(entry.target) } }) }, { threshold: .12 }); revealItems.forEach(function (item) { observer.observe(item) }) } else { revealItems.forEach(function (item) { item.classList.add("is-visible") }) }
+      const sections = [...document.querySelectorAll("main section[id]")]; const links = [...document.querySelectorAll(".nav-links a[href^='#']")];
+      if ("IntersectionObserver" in window) { const activeObserver = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { links.forEach(function (link) { link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id) }) } }) }, { rootMargin: "-25% 0px -60% 0px" }); sections.forEach(function (section) { activeObserver.observe(section) }) }
+    })();
+    /* ===== WHATSAPP CONTACT FORM ===== */
+    (function () {
+      const form = document.getElementById("contact-form"); const status = document.getElementById("form-status"); const whatsappNumber = "[91XXXXXXXXXX]"; // Replace with international digits for your WhatsApp number.
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); if (!form.reportValidity()) return;
+        const data = new FormData(form); const name = String(data.get("name")).trim(); const contact = String(data.get("contact")).trim(); const service = String(data.get("service")).trim(); const message = String(data.get("message")).trim();
+        if (!name || !contact || !service || !message) { status.textContent = "Please complete every field before sending."; return }
+        const text = "Hi [YOUR NAME], I'm " + name + ". Service: " + service + ". Contact: " + contact + ". Message: " + message; const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+        const opened = window.open(url, "_blank"); if (opened) opened.opener = null; status.textContent = opened ? "WhatsApp is ready with your message. Replace the placeholder number to receive enquiries." : "Your browser blocked the new tab. Allow pop-ups to continue.";
+      });
+    })();
+  </script>
+</body>
+
+</html>
